@@ -1,21 +1,11 @@
 #include <stdio.h>
 
-void incrementByValue(int n) {
-    n = n + 1;
-}
-
-void incrementByReference(int *n) {
-    *n = *n + 1;
-}
-
 int main() {
-    int value = 50;
+    int count = 10;
+    int *pCount = &count;
 
-    incrementByValue(value);
-    printf("After incrementByValue: %d (unchanged)\n", value);
+    *pCount = 25;  // Modify count using the pointer
 
-    incrementByReference(&value);
-    printf("After incrementByReference: %d (incremented)\n", value);
-
+    pri
     return 0;
 }
